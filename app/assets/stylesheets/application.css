@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ body { padding-top: 30px; }
+ footer { margin-top: 100px; }
+ table, td, th { vertical-align: middle; border: none; }
+ th { border-bottom: 1px solid #DDD; }
+.nav { padding-top: 10px; }
+ /*.navbar-brand {background-image: url("/images/photos/Panorama.jpg"); background-size: 400px; background-repeat: no-repeat; }*/
