@@ -1,0 +1,11 @@
+<p>
+  <strong>Name:</strong>
+  <%= @article.name %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @article.comment %>
+</p>
+<%= link_to 'Edit', edit_request_path(@article) %>
+<%= link_to 'Back', requests_path %>
