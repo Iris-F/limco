@@ -4,8 +4,8 @@ class RequestsController < ApplicationController
   end
 
   def create
-    @request = Request.new(params.require[:request].permit(:name, :email, :startdate, :enddate, :noofguests, :children, :childreninfo, :status))
-#    @request = Request.new(params.require(:request).permit(:name, :email, :startdate, :enddate, :noofguests, :children, :childreninfo, :status))
+    @request = Request.new(request_params)
+
     @request.save
     redirect_to @request
   end
@@ -17,9 +17,15 @@ class RequestsController < ApplicationController
   end
 
   def show
+    @request = Request.find(params[:id])
   end
 
   def update
   end
+
+  private
+    def request_params
+      params.require(:request).permit(:name, :email, :startdate, :enddate, :noofguests, :children, :childreninfo, :status, :comment)
+    end
 
 end
