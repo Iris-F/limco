@@ -39,7 +39,7 @@
 
 header { padding-top: 30px; }
 /*code below doesn't work?*/
-.iris body {background-color: #353230}
+.iris { background-color: #353230; color: white;}
 
 .field_with_errors {
   color: red;

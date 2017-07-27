@@ -2,8 +2,32 @@
   <strong>Name:</strong>
   <%= @request.name %>
 </p>
-
 <p>
-  <strong>Comment:</strong>
+  <strong>Email:</strong>
+  <%= @request.email %>
+</p>
+<p>
+  <strong>From:</strong>
+  <%= @request.startdate %>
+</p>
+<p>
+  <strong>Until:</strong>
+  <%= @request.enddate %>
+</p>
+<p>
+  <strong>Number of guests:</strong>
+  <%= @request.noofguests %>
+</p>
+<p>
+  <strong>Are you traveling with children?:</strong>
+  <%= @request.children %>
+</p>
+<p>
+  <strong>If so, how many children are you travelig with and how old are they?:</strong>
+  <%= @request.childreninfo %>
+</p>
+<p>
+  <strong>Comments:</strong>
   <%= @request.comment %>
 </p>
+<%= link_to "Back", requests_path %>
