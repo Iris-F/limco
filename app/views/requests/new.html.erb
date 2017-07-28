@@ -15,15 +15,11 @@
 <div class="page-header container">
   <h1>Plan your visit</h1>
 </div>
-<h3>Handy info for planning your visit</h3>
-<p><b><i>Hurricane season:</b></i> from June until November.<br>This means there is a higher chance of a hurricane hitting the island, but the chances are highest in August and September which are also usually the hottest months (no wind and very humid air). All other months are usually okay to visit<br><br></p>
-<p><b><i>High season:</b></i> December and January. <br>This means everything is more expensive and the island is generally quite busy with (cruiseship) tourists.</p>
-
-  <h3>Calendar</h3>
-  <p>Check in the calendar below whether the guest apartment is available in the period you want to visit.</p>
+  <h3>New Request</h3>
+  <p>Fill in your information in the form below to send us a request.</p>
   <div id="calendar">
     <p><iframe src="https://calendar.google.com/calendar/embed?src=sailjefp4br9nqp6cnmv5dfgu0%40group.calendar.google.com&ctz=America/Curacao" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe></p>
-    <p>Have you found a period in which you'd like to come visit? <%= link_to "Send us a request!", new_request_path %></p>
+    <p>Fill in your information below to send us a request</p>
   </div>
   <div>
   <% if @request.errors.any? %>
@@ -41,35 +37,35 @@
   <% end %>
     <%= form_for :request, url: requests_path do |f| %>
       <p>
-        <strong>Name*:</strong><br>
+        <%= f.label :name, 'Name*:' %><br>
         <%= f.text_field :name %>
       </p>
       <p>
-        <strong>Email*:</strong><br>
+        <%= f.label :email, 'Email address*:' %><br>
         <%= f.text_field :email %>
       </p>
       <p>
-        <strong>From*:</strong><br>
+        <%= f.label :startdate, 'From*:' %><br>
         <%= f.date_field :startdate %>
       </p>
       <p>
-        <strong>Until*:</strong><br>
+        <%= f.label :enddate, 'Until*:' %><br>
         <%= f.date_field :enddate %>
       </p>
       <p>
-        <strong>Number of guests*:</strong><br>
+        <%= f.label :noofguests, 'Number of guests*:' %><br>
         <%= f.text_field :noofguests %>
       </p>
       <p>
-        <strong>Are you traveling with children?*:</strong><br>
-        <%= f.check_box :children %>
+        <%= f.label :children, 'Are you traveling with children?*:' %><br>
+        <%= f.check_box :children %><%= f.label :children, 'Yes' %><br>
       </p>
       <p>
-        <strong>If so, how many children are you travelig with and how old are they?:</strong><br>
+        <%= f.label :children, 'If so, how many children are you travelig with and how old are they?::' %><br>
         <%= f.text_field :childreninfo %>
       </p>
       <p>
-        <strong>Comments:</strong><br>
+        <%= f.label :comment, 'Comments:' %><br>
         <%= f.text_area :comment %>
       </p>
 
@@ -78,4 +74,4 @@
       </p>
     <% end %>
   </div>
-<%= link_to 'Back', articles_path %>
+  <a href="/pages/plan">Cancel</a></li>
