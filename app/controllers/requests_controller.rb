@@ -1,9 +1,9 @@
 class RequestsController < ApplicationController
 
   # The following show action will be used to render a static page with a template page that is the same name as a parameter that is passed in.
-  # http_basic_authenticate_with name: "friend", password: "topsecret"
+  http_basic_authenticate_with name: "friend", password: "topsecret"
   # Add an exception with "", except: [:welcome]""
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def index
     @requests = Request.all
