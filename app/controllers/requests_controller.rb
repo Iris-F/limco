@@ -1,5 +1,8 @@
 class RequestsController < ApplicationController
 
+  # The following show action will be used to render a static page with a template page that is the same name as a parameter that is passed in.
+  http_basic_authenticate_with name: "friend", password: "topsecret", except: [:welcome]
+
   def index
     @requests = Request.all
   end
@@ -23,6 +26,11 @@ class RequestsController < ApplicationController
   def edit
     @request = Request.find(params[:id])
   end
+
+# Doesn't seem to work they way I want it to
+#  def approve
+#    @request = Request.find(params[:id])
+#  end
 
   def show
     @request = Request.find(params[:id])

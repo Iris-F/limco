@@ -1,33 +1,37 @@
 <p>
-  <strong>Name:</strong>
+  <strong>Name:</strong><br>
   <%= @request.name %>
 </p>
 <p>
-  <strong>Email:</strong>
+  <strong>Email:</strong><br>
   <%= @request.email %>
 </p>
 <p>
-  <strong>From:</strong>
+  <strong>From:</strong><br>
   <%= @request.startdate %>
 </p>
 <p>
-  <strong>Until:</strong>
+  <strong>Until:</strong><br>
   <%= @request.enddate %>
 </p>
 <p>
-  <strong>Number of guests:</strong>
+  <strong>Number of guests:</strong><br>
   <%= @request.noofguests %>
 </p>
 <p>
-  <strong>Are you traveling with children?:</strong>
-  <%= @request.children %>
+  <strong>Are you traveling with children?</strong><br>
+  <%= human_boolean(@request.children) %>
 </p>
 <p>
-  <strong>If so, how many children are you travelig with and how old are they?:</strong>
+  <strong>If so, how many children are you travelig with and how old are they?</strong><br>
   <%= @request.childreninfo %>
 </p>
 <p>
-  <strong>Comments:</strong>
+  <strong>Comments:</strong><br>
   <%= @request.comment %>
+</p>
+<p>
+  <strong>Status:</strong><br>
+  <%= @request.status %>
 </p>
 <%= link_to "Back", requests_path %>

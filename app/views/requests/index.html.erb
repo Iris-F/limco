@@ -21,7 +21,7 @@
       <td><%= request.startdate %></td>
       <td><%= request.enddate %></td>
       <td><%= request.noofguests %></td>
-      <td><%= request.children %></td>
+      <td><%= human_boolean(request.children) %></td>
       <td><%= request.status %></td>
       <td><%= link_to 'Show', request_path(request) %></td>
       <td><%= link_to 'Edit', edit_request_path(request) %></td>
