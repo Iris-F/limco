@@ -48,7 +48,7 @@ class RequestsController < ApplicationController
 
   private
     def request_params
-      params.require(:request).permit(:name, :email, :startdate, :enddate, :noofguests, :children, :childreninfo, :status, :comment)
+      params.require(:request).permit(:name, :email, :startdate, :enddate, :noofguests, :children, :childreninfo, :approval_status, :comment)
     end
 
 end

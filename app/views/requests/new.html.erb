@@ -57,7 +57,7 @@
         <%= f.text_field :noofguests %>
       </p>
       <p>
-        <%= f.label :children, 'Are you traveling with children?*:' %><br>
+        <%= f.label :children, 'Are you traveling with children?*' %><br>
         <%= f.label :children, "Yes", :value => "true"  %>
         <%= f.radio_button :children, true %>
         <%= f.label :children, "No", :value => "false" %>
@@ -65,7 +65,7 @@
         <!--if one option should already be checked, add: ', :checked => true' -->
       </p>
       <p>
-        <%= f.label :children, 'If so, how many children are you travelig with and how old are they?::' %><br>
+        <%= f.label :children, 'If so, how many children are you travelig with and how old are they?' %><br>
         <%= f.text_field :childreninfo %>
       </p>
       <p>
@@ -73,9 +73,7 @@
         <%= f.text_area :comment %>
       </p>
       <p>
-        <!--Hidden field to set a default value (if not already set in the database with change_column_default in migration file)
-        <%= hidden_field(:request, :status, :value => 'Waiting for Approval') %>
-      -->
+        <%= hidden_field(:request, :approval_status, :value => 'Waiting for Approval') %>
       </p>
       <p>
         <%= f.submit %>

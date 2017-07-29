@@ -52,9 +52,10 @@
     <%= f.text_area :comment %>
   </p>
   <p>
-    <%= f.label :status %><br>
-    <%= f.select :status, [['Waiting for Approval','Waiting for Approval'],['Approved','Approved'],['Rejected','Rejected'],['Cancelled','Cancelled']] %>
+    <%= f.label :approval_status %><br>
+    <%= f.select :approval_status, [['Waiting for Approval','Waiting for Approval'],['Approved','Approved'],['Rejected','Rejected'],['Cancelled','Cancelled']] %>
   </p>
+
   <p>
     <br><%= f.submit %>
   </p>

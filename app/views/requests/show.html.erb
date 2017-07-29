@@ -32,6 +32,7 @@
 </p>
 <p>
   <strong>Status:</strong><br>
-  <%= @request.status %>
+  <%= @request.approval_status %>
 </p>
-<%= link_to "Back", requests_path %>
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
