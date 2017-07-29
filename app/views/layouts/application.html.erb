@@ -16,6 +16,41 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/pages/welcome/">
+            <img id="logo" src="/images/logos/StMaarten-logo.jpg" height="30px">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav nav-pills">
+            <li role="presentation"><a href="/pages/photos">Photos</a></li>
+            <li><a href="/pages/plan">Plan your visit</a></li>
+            <li><a href="/pages/guestbook">Guestbook</a></li>
+<!--Dropdown menu
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guest Apartment <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/pages/welcome">Weclome</a></li>
+                <li><a href="/pages/photos">Photos</a></li>
+                <li><a href="/pages/plan">Plan your visit</a></li>
+                <li><a href="/pages/guestbook">Guestbook</a></li>
+              </ul>
+            </li>
+-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <p class="navbar-text pull-right">
       <% if user_signed_in? %>
         Logged in as <strong><%= current_user.email %></strong>.
@@ -26,16 +61,16 @@
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
     </p>
-    <header>
-    </header>
     <div class="container">
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
       <%= yield %>
+
     </div>
     <!--
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -53,11 +88,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav nav-pills">
-
-To add later once I have something for a portfolio
             <li role="presentation"><a href="/pages/home">Portfolio</a></li>
-          -->
-<!--To add later?
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Guest Apartment <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -75,7 +106,7 @@ To add later once I have something for a portfolio
   -->
     <footer>
       <div class="container">
-        © Iris Fehse <%= Time.now.year %>
+        © Limco Guest Apartment <%= Time.now.year %>
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

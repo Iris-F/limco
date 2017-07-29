@@ -14,7 +14,7 @@
  *= require_self
  */
  /*Added the following code as instructed by Rails Girls tutorial*/
- body { padding-top: 30px; font-family: 'Karla'; }
+ body { padding-top: 60px; font-family: 'Karla'; }
  footer { margin-top: 100px; }
  table, td, th { vertical-align: middle; border: none; }
  th { border-bottom: 1px solid #DDD; }

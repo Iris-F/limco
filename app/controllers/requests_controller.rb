@@ -1,7 +1,8 @@
 class RequestsController < ApplicationController
 
   # The following show action will be used to render a static page with a template page that is the same name as a parameter that is passed in.
-  http_basic_authenticate_with name: "friend", password: "topsecret", except: [:welcome]
+  http_basic_authenticate_with name: "friend", password: "topsecret"
+  # Add an exception with "", except: [:welcome]""
 
   def index
     @requests = Request.all
@@ -48,7 +49,7 @@ class RequestsController < ApplicationController
 
   private
     def request_params
-      params.require(:request).permit(:name, :email, :startdate, :enddate, :noofguests, :children, :childreninfo, :approval_status, :comment)
+      params.require(:request).permit(:name, :email, :startdate, :enddate, :noofguests, :children, :childreninfo, :approval_status, :status, :comment)
     end
 
 end

@@ -1,6 +1,7 @@
 <head>
   <title>Limco Guest Apartment</title>
 </head>
+<!--
 <header>
   <div class="collapse navbar-collapse">
     <ul class="nav nav-pills">
@@ -12,6 +13,7 @@
     </ul>
   </div>
 </header>
+-->
 <div class="page-header container">
   <h1>Plan your visit</h1>
 </div>
@@ -61,11 +63,11 @@
         <%= f.label :children, "Yes", :value => "true"  %>
         <%= f.radio_button :children, true %>
         <%= f.label :children, "No", :value => "false" %>
-        <%= f.radio_button :children, false%>
+        <%= f.radio_button :children, false %>
         <!--if one option should already be checked, add: ', :checked => true' -->
       </p>
       <p>
-        <%= f.label :children, 'If so, how many children are you travelig with and how old are they?' %><br>
+        <%= f.label :childreninfo, 'If so, how many children are you travelig with and how old are they?' %><br>
         <%= f.text_field :childreninfo %>
       </p>
       <p>
@@ -73,7 +75,7 @@
         <%= f.text_area :comment %>
       </p>
       <p>
-        <%= hidden_field(:request, :approval_status, :value => 'Waiting for Approval') %>
+        <%= hidden_field(:request, :status, :value => 'Waiting for Approval') %>
       </p>
       <p>
         <%= f.submit %>
