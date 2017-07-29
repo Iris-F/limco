@@ -53,13 +53,12 @@
   </p>
   <p>
     <%= f.label :status %><br>
-    <%= f.text_field :status, :disabled => true %><br>
+    <%= f.select :status, [['Waiting for Approval','Waiting for Approval'],['Approved','Approved'],['Rejected','Rejected'],['Cancelled','Cancelled']] %>
   </p>
-<!--Tried to insert a button to approve the request and change the status to Approved
   <p>
-    <br><%= f.submit %><%= f.button  :submit , name: "status", value: "Approved"%>
+    <br><%= f.submit %>
   </p>
--->
+
 <% end %>
 
 <a href="/requests/">Back to overview</a>
