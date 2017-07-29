@@ -1,9 +1,9 @@
-<h1>Listing articles</h1>
+<h1>Guestbook entries</h1>
 
-<table>
+<table class="table">
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Name</th>
+    <th>Guestbook entry</th>
   </tr>
 
   <% @articles.each do |article| %>
@@ -16,4 +16,4 @@
   <% end %>
 </table>
 <br>
-<%= link_to 'New', new_article_path %>
+<%= link_to 'New guestbook entry', new_article_path %>
