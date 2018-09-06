@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is my personal coding playground: a website for our guest apartment on Sint Maarten, where guests can read general info about the apartment and the island, consult the calendar to see the availability. They can create an account and sign in and send us a request to stay at the guest apartment. They can also add an entry in the guestbook.
